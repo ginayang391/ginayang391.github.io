@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>詠晴 楊 — 履歷</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <img class="avatar" src="images/profile.jpg" alt="個人照片">
+      <div class="name-block">
+        <h1>詠晴 楊</h1>
+        <p class="tagline">Undergraduate Program in Intelligent Computer and Big Data</p>
+        <p class="contact">Email: your.email@example.com • Phone: +886-9xx-xxx-xxx</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="summary card">
+      <h2>個人簡介</h2>
+      <p>簡短的自我介紹／求職目標。舉例：熱愛資料科學與大數據分析，擅長 Python、SQL、資料視覺化，期望找尋實習機會以應用在實務專案上。</p>
+    </section>
+
+    <section class="experience card">
+      <h2>學歷</h2>
+      <ul>
+        <li><strong>中原大學</strong> — 智慧運算與大數據學程（預期畢業 YYYY）</li>
+        <!-- 可依需要新增 -->
+      </ul>
+    </section>
+
+    <section class="skills card">
+      <h2>技能</h2>
+      <ul class="skill-list">
+        <li>程式語言：Python, JavaScript, SQL</li>
+        <li>工具：Git, GitHub, Jupyter Notebook</li>
+        <li>其他：資料視覺化、機器學習基礎</li>
+      </ul>
+    </section>
+
+    <section class="projects card">
+      <h2>專案</h2>
+      <article>
+        <h3>專案名稱 A</h3>
+        <p>專案簡述：做了什麼、使用哪些技術、成果是什麼（量化會更好）。</p>
+      </article>
+    </section>
+
+    <footer class="card footer">
+      <p>更多作品請見 GitHub：<a href="https://github.com/你的帳號" target="_blank">github.com/你的帳號</a></p>
+    </footer>
+  </main>
+</body>
+</html>
+
+:root{
+  --bg:#f7f9fb;
+  --card:#ffffff;
+  --accent:#2563eb;
+  --text:#111827;
+  --muted:#6b7280;
+  --radius:12px;
+  --max-width:900px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.5;
+  display:flex;
+  justify-content:center;
+  padding:24px;
+}
+
+.container{
+  width:100%;
+  max-width:var(--max-width);
+}
+
+/* header */
+.site-header{
+  margin-bottom:18px;
+}
+.header-inner{
+  display:flex;
+  gap:18px;
+  align-items:center;
+  background:linear-gradient(90deg, rgba(37,99,235,0.06), rgba(37,99,235,0.02));
+  padding:16px;
+  border-radius:var(--radius);
+}
+.avatar{
+  width:120px;
+  height:120px;
+  object-fit:cover;
+  border-radius:16px;
+  border:3px solid white;
+  box-shadow:0 6px 18px rgba(2,6,23,0.08);
+}
+
+/* cards */
+.card{
+  background:var(--card);
+  padding:16px;
+  border-radius:var(--radius);
+  margin-bottom:12px;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.04);
+}
+
+/* text */
+.name-block h1{margin:0 0 6px 0;font-size:1.6rem}
+.tagline{margin:0;color:var(--muted)}
+.contact{margin-top:6px;color:var(--muted);font-size:0.95rem}
+
+/* lists */
+.skill-list{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
+.skill-list li{background:#f1f5f9;padding:8px 10px;border-radius:999px;font-size:0.95rem;color:var(--muted)}
+
+/* responsive */
+@media (max-width:640px){
+  .header-inner{flex-direction:column; text-align:center}
+  .avatar{width:110px;height:110px}
+}
